@@ -1,4 +1,4 @@
-<%= form_with(model: collegemodule) do |form| %>
+<%= form_with(model: collegemodule, url: collegemodule_path(collegemodule), method: :patch) do |form| %>
   <% if collegemodule.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(collegemodule.errors.count, "error") %> prohibited this collegemodule from being saved:</h2>

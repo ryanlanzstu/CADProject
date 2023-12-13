@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def modules
+    @collegemodules = Collegemodule.all
   end
 
   def calendar
