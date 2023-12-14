@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Collegemodules</h1>
+<h1>Modules</h1>
 
-<div id="collegemodules">
+<div id="Modules">
   <% @collegemodules.each do |collegemodule| %>
     <%= render collegemodule %>
     <p>
-      <%= link_to "Show this collegemodule", collegemodule %>
+      <%= link_to "Show Module", collegemodule %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New collegemodule", new_collegemodule_path %>
+<%= link_to "New Module", new_collegemodule_path %>

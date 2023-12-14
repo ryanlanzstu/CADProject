@@ -3,8 +3,8 @@
 <%= render @collegemodule %>
 
 <div>
-  <%= link_to "Edit this collegemodule", edit_collegemodule_path(@collegemodule) %> |
-  <%= link_to "Back to collegemodules", collegemodules_path %>
+  <%= link_to "Edit Module", edit_collegemodule_path(@collegemodule) %> |
+  <%= link_to "Return", collegemodules_path %>
 
-  <%= button_to "Destroy this collegemodule", @collegemodule, method: :delete %>
+  <%= button_to "Delete Module", @collegemodule, method: :delete %>
 </div>

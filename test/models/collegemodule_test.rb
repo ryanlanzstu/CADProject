@@ -3,6 +3,12 @@
 require 'test_helper'
 
 class CollegemoduleTest < ActiveSupport::TestCase
+  self.use_transactional_tests = false
+  self.use_instantiated_fixtures = false
+
+  fixtures :collegemodules
+
+
   test "should create a new collegemodule" do
     collegemodule = Collegemodule.create(module_name: 'Module 1', module_id: 'ID001', module_lecturer: 'Lecturer 1')
     assert collegemodule.valid?
@@ -25,3 +31,4 @@ class CollegemoduleTest < ActiveSupport::TestCase
     assert_raises(ActiveRecord::RecordNotFound) { collegemodule.reload }
   end
 end
+

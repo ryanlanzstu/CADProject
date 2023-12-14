@@ -1,6 +1,11 @@
 require "test_helper"
 
 class CollegemodulesControllerTest < ActionDispatch::IntegrationTest
+  self.use_transactional_tests = false
+  self.use_instantiated_fixtures = false
+
+  fixtures :collegemodules
+
   setup do
     @collegemodule = collegemodules(:one)
   end
