@@ -44,6 +44,10 @@ gem "bootsnap", require: false
 
 # Deivse for authentication
 gem "devise"
+
+# Simple Calendar for events
+gem "simple_calendar", "~> 2.4"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

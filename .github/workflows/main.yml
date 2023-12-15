@@ -22,7 +22,7 @@ jobs:
       run: |
         gem install bundler
         bundle install
-
+# Had to set up database as workflow doesn't know it had to be set up and data loaded
     - name: Setup database
       run: |
         rails db:create RAILS_ENV=test

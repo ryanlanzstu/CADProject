@@ -10,11 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_14_153703) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_15_135146) do
   create_table "collegemodules", force: :cascade do |t|
     t.string "module_name"
     t.string "module_id"
     t.string "module_lecturer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

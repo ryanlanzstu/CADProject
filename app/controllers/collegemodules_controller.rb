@@ -26,7 +26,7 @@ class CollegemodulesController < ApplicationController
     respond_to do |format|
       if @collegemodule.save
         format.html { redirect_to collegemodule_url(@collegemodule), notice: "Module Created!" }
-        format.json { render :show, status: :created, location: @collegemodule }
+        format.json { render json: @collegemodule, status: :created, location: @collegemodule }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @collegemodule.errors, status: :unprocessable_entity }
