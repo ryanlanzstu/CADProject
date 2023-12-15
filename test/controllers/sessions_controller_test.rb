@@ -4,10 +4,13 @@ require 'test_helper'
 class SessionsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
+  setup do
+    @user = users(:one)
+  end
+
   test "should sign in user" do
-    user = users(:one) # Assuming you have fixture data or factories
-    sign_in user
-    get root_path # Or any other action that requires authentication
+    sign_in @user
+    get root_path
     assert_response :success
   end
 
@@ -22,8 +25,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should sign out user" do
-    user = users(:one)
-    sign_in user
+    sign_in @user
     get destroy_user_session_path
     assert_redirected_to root_path
   end

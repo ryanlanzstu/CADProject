@@ -1,13 +1,12 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# test/fixtures/events.yml
 one:
   title: MyString
   description: MyText
-  start_time: 2023-12-15 13:51:47
-  end_time: 2023-12-15 13:51:47
+  start_time: '2023-12-15 13:51:47'
+  end_time: '2023-12-15 13:51:47'
 
 two:
   title: MyString
   description: MyText
-  start_time: 2023-12-15 13:51:47
-  end_time: 2023-12-15 13:51:47
+  start_time: '2023-12-15 13:51:47'
+  end_time: '2023-12-15 13:51:47'

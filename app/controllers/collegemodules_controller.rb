@@ -1,9 +1,10 @@
 class CollegemodulesController < ApplicationController
   before_action :set_collegemodule, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /collegemodules or /collegemodules.json
   def index
-    @collegemodules = Collegemodule.all
+    @collegemodules = current_user.collegemodules
   end
 
   # GET /collegemodules/1 or /collegemodules/1.json
@@ -12,7 +13,7 @@ class CollegemodulesController < ApplicationController
 
   # GET /collegemodules/new
   def new
-    @collegemodule = Collegemodule.new
+    @collegemodule = current_user.collegemodules.build
   end
 
   # GET /collegemodules/1/edit
@@ -21,7 +22,7 @@ class CollegemodulesController < ApplicationController
 
   # POST /collegemodules or /collegemodules.json
   def create
-    @collegemodule = Collegemodule.new(collegemodule_params)
+    @collegemodule = current_user.collegemodules.build(collegemodule_params)
 
     respond_to do |format|
       if @collegemodule.save
@@ -60,7 +61,7 @@ class CollegemodulesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_collegemodule
-      @collegemodule = Collegemodule.find(params[:id])
+      @collegemodule = current_user.collegemodules.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

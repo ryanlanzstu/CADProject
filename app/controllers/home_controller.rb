@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!, only: [:modules]
   def index
   end
 
   def modules
-    @collegemodules = Collegemodule.all
+    @collegemodules = current_user.collegemodules
   end
 
   def calendar
